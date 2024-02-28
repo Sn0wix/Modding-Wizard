@@ -15,6 +15,7 @@ Plugin.register("modding_wizard", {
 		tags: ["Minecraft: Java Edition", "Exporter", "Format"],
 		version: "0.0.1",
 		variant: "desktop",
+    //test
 
   onload() {
     try {
