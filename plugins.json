@@ -1,4 +1,14 @@
 {
+	"modding_wizard": {
+		"title": "Modding Wizard",
+		"author": "Sn0wix_",
+		"description": "Export your item, block or entity model as a simple minecraft mod that can later be edited in Mcreator.",
+		"about": "TODO",
+		"icon": "icon-modding-wizard",
+		"tags": ["Minecraft: Java Edition", "Exporter", "Format"],
+		"version": "0.0.1",
+		"variant": "desktop"
+	},
 	"sam3dj": {
 		"title": "sam3DJ",
 		"author": "1Turtle",
