@@ -13,7 +13,7 @@
 		"title": "sam3DJ",
 		"author": "1Turtle",
 		"tags": ["Minecraft: Java Edition", "Format", "Exporter"],
-		"version": "1.0.3",
+		"version": "1.1.0",
 		"variant": "both",
 		"description": "Generate 3D prints in MC (Java Edition) via the .3DJ format within the SC-Peripherals mod!",
 		"about": "This plugin allows you to **export a model into the .3DJ format**.  \nThe .3DJ format is _mostly_ used with the `3D Printer` from the **SC-Peripherals** Java Edition mod.  \n  \n**Tip:** Cubes in a `state_on` folder will be _only_ displayed whenever the model is toggled on!    \n> **Note:** _The format does not support the following attributes:_  \n> * Rotated cubes  \n> * One cube with multiple textures  \n> * Cubes outside the given block space *(16x16x16 Grid / 1x1x1 Block)*  \n  \nTry to avoid those things, or else you might run into weird results.  \nMeshes are also not supported due to the limitations of the format and Minecraft.\n> For the full format documentations, see the [SwitchCraft3 Wiki](https://docs.sc3.io/whats-new/sc-peripherals.html#_3dj-format)  \n",
@@ -24,7 +24,7 @@
 		"author": "Titus Evans (SnaveSutit)",
 		"icon": "icon.svg",
 		"description": "A Blockbench plugin that makes complex animation a breeze in Minecraft: Java Edition.",
-		"version": "0.4.7",
+		"version": "0.4.8",
 		"min_version": "4.9.4",
 		"variant": "desktop",
 		"tags": ["Minecraft: Java Edition", "Animation", "Display Entities"],
@@ -55,6 +55,7 @@
 		"author": "Geenium",
 		"description": "Loads Bedrock vanilla entity models up to version 1.13",
 		"tags": ["Deprecated", "Minecraft: Bedrock Edition"],
+		"deprecation_note": "This plugin is no longer updated. To get models for texturing, use File > New > Minecraft Skin. To get Minecraft Bedrock Edition models, use the plugin 'Minecraft Entity Wizard'. To get template models for OptiFine CEM, use the plugin 'CEM Template Loader'.",
 		"icon": "pets",
 		"variant": "both"
 	},
@@ -95,7 +96,8 @@
 		"author": "JannisX11",
 		"description": "Fixes texture bleeding (small white or colored lines around the edges of your model) by slightly shrinking UV maps",
 		"icon": "healing",
-		"min_version": "3.0.0",
+		"min_version": "3.0.5",
+		"version": "1.1.0",
 		"variant": "both"
 	},
 	"shape_generator": {
@@ -314,11 +316,16 @@
 		"author": "Ewan Howell",
 		"description": "Create Minecraft-styled title models!",
 		"tags": ["Minecraft", "Title", "Logo"],
-		"version": "1.4.1",
+		"version": "1.5.0",
 		"min_version": "4.8.0",
 		"variant": "both",
 		"creation_date": "2023-06-10",
-		"await_loading": true
+		"await_loading": true,
+		"contributes": {
+			"formats": ["minectaft_title"]
+		},
+		"has_changelog": true,
+		"website": "https://ewanhowell.com/plugins/minecraft-title-generator/"
 	},
 	"workspaces": {
 		"title": "Workspaces",
@@ -368,8 +375,10 @@
 		"author": "Eliot Lash, Gecko, McHorse, AzureDoom, Tslat",
 		"icon": "movie_filter",
 		"description": "Create animated blocks, items, entity, and armor using the GeckoLib library and plugin. https://github.com/bernie-g/geckolib/wiki",
-		"tags": ["Minecraft: Java Edition"],
-		"version": "3.0.7",
+		"tags": [
+			"Minecraft: Java Edition"
+		],
+		"version": "3.0.8",
 		"min_version": "4.0.0",
 		"await_loading": true,
 		"variant": "both",
@@ -381,7 +390,7 @@
 		"icon": "icon-format_java",
 		"description": "Plugin for exporting Modded Entities using Fabric/Yarn Sourcemap",
 		"tags": ["Minecraft: Java Edition"],
-		"version": "0.2.1",
+		"version": "0.2.2",
 		"min_version": "3.6.6",
 		"variant": "both"
 	},
@@ -452,17 +461,6 @@
 		"min_version": "3.7.0",
 		"variant": "both"
 	},
-	"bedrock_pivot_fix": {
-		"title": "Bedrock Pivot Fix 2",
-		"icon": "gps_fixed",
-		"author": "JannisX11",
-		"description": "Rotated cubes are broken in custom-block models in older versions of Minecraft: Bedrock Edition. Use this plugin to fix them.",
-		"about": "After installing, use **Filter > Fix Bedrock Pivots** to fix your current model.",
-		"tags": ["Deprecated", "Minecraft: Bedrock Edition"],
-		"version": "2.0.1",
-		"min_version": "3.0.0",
-		"variant": "both"
-	},
 	"simplify": {
 		"title": "Simplify Models",
 		"icon": "build",
@@ -486,9 +484,9 @@
 	"voxel_shape_generator": {
 		"title": "VoxelShape Generators",
 		"icon": "fa-cubes",
-		"author": "Spectre0987",
+		"author": "Spectre0987, Nyfaria",
 		"description": "Generates Voxel Shapes (Supports Mojang Mappings and MCP)",
-		"version": "0.1.0",
+		"version": "0.2.0",
 		"variant": "both",
 		"tags": ["Minecraft: Java Edition"]
 	},
@@ -497,7 +495,7 @@
 		"icon": "bar_chart",
 		"author": "CyberStefNef",
 		"description": "Generates Voxel Shapes for Fabric",
-		"version": "0.0.1",
+		"version": "1.0.0",
 		"variant": "both",
 		"tags": ["Minecraft: Java Edition"]
 	},
@@ -517,10 +515,11 @@
 		"icon": "icon.png",
 		"description": "Create entities for Minecraft: Bedrock Edition! Start with the looks and behavior of a vanilla entity, and turn it into your own creation!",
 		"tags": ["Minecraft: Bedrock Edition"],
-		"version": "1.3.2",
+		"version": "1.4.0",
 		"min_version": "4.8.0",
 		"variant": "both",
-		"creation_date": "2021-08-04"
+		"creation_date": "2021-08-04",
+		"has_changelog": true
 	},
 	"minecraft_block_wizard": {
 		"title": "Minecraft Block Wizard",
@@ -595,9 +594,10 @@
 		"author": "Malik12tree",
 		"icon": "icon.png",
 		"description": "Adds powerful mesh modeling tools, operators and generators!",
-		"version": "2.0.0",
+		"version": "2.0.1",
 		"min_version": "4.9.4",
 		"variant": "both",
+		"creation_date": "2022-04-09",
 		"tags": ["Format: Generic Model", "Mesh", "Tool"]	  
 	},
 	"wasd_controls": {
@@ -659,6 +659,7 @@
 		"version": "1.2.0",
 		"variant": "both",
 		"about": "This plugin exports your Blockbench animations as Java code to be used for the new 1.19+ keyframe system. Please note that this system does not support Molang or step interpolation.",
+		"deprecation_note": "This feature is now built into Blockbench, the plugin is no longer required.",
 		"tags": ["Deprecated", "Minecraft: Java Edition"]
 	},
 	"root_motion_extractor": {
@@ -764,12 +765,14 @@
 	},
 	"bbs_exporter": {
 		"title": "BBS Model Ex/importer",
-		"icon": "fa-file-export",
+		"icon": "icon.png",
 		"author": "McHorse",
 		"description": "Adds actions to export/import models in BBS format, which is used by BBS machinima studio.",
-		"version": "1.2.0",
+		"version": "1.2.2",
 		"variant": "both",
-		"tags": ["Exporter"]
+		"tags": ["Exporter", "Importer"],
+		"min_version": "4.8.0",
+		"has_changelog": true
 	},
 	"highlight_generator": {
 		"title": "Highlight Mod Shape Generator",
@@ -860,7 +863,7 @@
 		"icon": "azureicon.png",
 		"description": "Create animated blocks, items, entity, and armor using the AzureLib library and plugin. This is a fork of Geckolib and cross compatibility will not be promised in the future.",
 		"tags": ["Minecraft: Java Edition"],
-		"version": "1.0.5",
+		"version": "1.0.6",
 		"min_version": "4.8.0",
 		"new_repository_format": true,
 		"await_loading": true,
@@ -872,6 +875,7 @@
 		"author": "SirJain",
 		"icon": "swap_horiz",
 		"description": "Adds a button that inverts selected cube sizes.",
+		"tags": ["Deprecated"],
 		"about": "This plugin adds a button that inverts the size values of each selected cube.\n## How to use\nTo use this plugin, go to the toolbar at the top of the screen (the one with the move, resize, and rotation tools) and click the `Invert Cubes` button. If you don't see the button, make sure to select some cubes. The button is also keybinded with a default of `Shift + I`.\n\nPlease report any bugs or suggestions you may have.",
 		"version": "1.0.0",
 		"min_version": "4.2.0",
@@ -899,5 +903,17 @@
 		"min_version": "4.8.0",
 		"variant": "both",
 		"creation_date": "2024-04-1"
+	},
+	"cosmic_reach_model_editor": {
+		"title": "Cosmic Reach Model Editor",
+		"author": "Z. Hoeshin",
+		"icon": "icon.png",
+		"description": "Allows creating, editing, importing and exporting Cosmic Reach block models.",
+		"tags": ["Cosmic Reach"],
+		"version": "1.1.1",
+		"min_version": "4.8.0",
+		"variant": "both",
+		"creation_date": "2024-04-19",
+		"new_repository_format": true
 	}
 }
